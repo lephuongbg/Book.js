@@ -1,0 +1,4 @@
+==Book.js==
+'''HTML5-based book emulator'''
+
+===Specification===
