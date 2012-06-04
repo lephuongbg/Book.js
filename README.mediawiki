@@ -2,3 +2,33 @@
 '''HTML5-based book emulator'''
 
 ===Specification===
+====UI====
+# Look like a book
+# Easy to use
+# Have transition effect when turning page
+
+====Functionality====
+''In important order''
+# API
+# System-independent font rendering
+# Read ePub file
+# Theme
+
+
+=====API=====
+''These are the functions which can be triggers through JavaScript API''
+# Turn page
+# Go to arbitrary page
+# Get data (in HTML) from a page
+# Set (HTML) data into a page
+# Dynamically add and remove page
+
+=====Font rendering=====
+For unified font rendering on Windows, Mac and Linux, Book.js need to have its own JavaScript font-rendering system.
+
+=====ePub=====
+ePub is a popular format for reading book on mobile devices. Many websites can use Book.js as a mean to preview an ePub file before providing 
+it to the customer.
+
+=====Theme=====
+Provide a mechanism to dynamically change the UI for website integration. 
