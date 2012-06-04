@@ -2,13 +2,16 @@
 '''HTML5-based book emulator'''
 
 ===Specification===
+----
 ====UI====
+----
 # Look like a book
 # Easy to use
 # Have transition effect when turning page
 
 ====Functionality====
-''In important order''
+----
+''In the order of importance''
 # API
 # System-independent font rendering
 # Read ePub file
