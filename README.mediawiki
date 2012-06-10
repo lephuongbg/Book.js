@@ -34,4 +34,10 @@ ePub is a popular format for reading book on mobile devices. Many websites can u
 it to the customer.
 
 =====Theme=====
-Provide a mechanism to dynamically change the UI for website integration. 
+Provide a mechanism to dynamically change the UI for website integration.
+
+
+====Features====
+----
+# Use multiple canvas as layers
+# Directly draw on the canvas to create animation
