@@ -1,1 +1,31 @@
- 
+<html>
+<head>
+    <script type="text/javascript" src="jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="kinetic-v3.9.8.min.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+    <style type="text/css">
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        canvas {
+            border: 1px solid grey;
+            box-shadow: 0px 5px 10px black;
+        }
+        #test {
+            width: 500px;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+    <div id="test"></div>
+    <script type="text/javascript">
+        window.onload = function () {
+        var a_book = new bookJs("test", 500, 200);
+        a_book.drawBook();
+        a_book.drawCircle();
+        };
+    </script>
+</body>
+</html>
