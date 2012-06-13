@@ -1,8 +1,6 @@
 <html>
 <head>
     <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
-    <script type="text/javascript" src="js/kinetic-v3.9.8.min.js"></script>
-    <script type="text/javascript" src="js/script.js"></script>
     <style type="text/css">
         body {
             margin: 0;
@@ -13,18 +11,18 @@
             box-shadow: 0px 5px 10px black;
         }
         #test {
-            width: 1120px;
+            width: 960px;
             margin: auto;
         }
     </style>
 </head>
 <body>
-    <div id="test"></div>
+    <div id="test"><embed src="svg/book-optimized.svg" type="image/svg+xml" width="100%"/></div>
     <script type="text/javascript">
-        window.onload = function () {
-        var a_book = new bookJs("test", 1120, 690);
-        a_book.drawBook();
-        };
+        var clipPath = jQuery('#top-right-clipPath');
+        animator = function (){
+            
+        }
     </script>
 </body>
 </html>
