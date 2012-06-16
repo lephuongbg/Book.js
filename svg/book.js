@@ -32,10 +32,8 @@ function mouseDown(evt) {
 function mouseUp(evt) {
    // stop dragging state
    mouseDragging = false;
-   // move the center line up after done flipping
+   
    if (document.getElementById("next-left-content").getAttribute("transform") == "translate(280,330)") {
-      var centerLine = document.getElementById("center-line");
-      centerLine.parentNode.appendChild(centerLine);
       doneFlippingNext();
    }
 }
@@ -105,6 +103,11 @@ function doneFlippingNext(){
    // prevent trigger again
    if (actedFlipNext)
       return;
+   
+   // move center-line to top
+   var centerLine = document.getElementById("center-line");
+   centerLine.parentNode.appendChild(centerLine);
+   centerLine.parentNode.insertBefore(document.getElementById("symmetry-line-container"), centerLine);
    
    /* Restructure the right pages */
    var nextRight = document.getElementById("next-right-container");
