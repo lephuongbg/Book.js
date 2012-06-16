@@ -391,7 +391,8 @@
     <g
        id="previous-left-container">
       <g
-         id="previous-left-content">
+         id="previous-left-content"
+         transform="translate(280,330)">
         <rect
            width="260"
            height="315"
@@ -448,7 +449,8 @@
     <g
        id="previous-right-container">
       <g
-         id="previous-right">
+         id="previous-right-content"
+         transform="translate(280,330)">
         <rect
            width="260"
            height="315"
@@ -544,7 +546,7 @@
          id="symmetry-group">
          <path
             d="M 0,0 0,-350"
-            transform="matrix(0.70710678,0.70710678,-0.70710678,0.70710678,260,0)"
+            transform="translate(260,0) rotate(45)"
             id="symmetry-line"
             style="stroke:#DEDEDE; stroke-Width: 1px;" />
       </g>
