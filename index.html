@@ -1,10 +1,17 @@
 <html>
 <head>
-    <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
     <style type="text/css">
         body {
             margin: 0;
             padding: 0;
+        }
+        * {
+         user-select: none;
+         -webkit-touch-callout: none;
+         -webkit-user-select: none;
+         -khtml-user-select: none;
+         -moz-user-select: none;
+         -ms-user-select: none;
         }
         canvas {
             border: 1px solid grey;
@@ -17,12 +24,6 @@
     </style>
 </head>
 <body>
-    <div id="test"><embed src="svg/book-optimized.svg" type="image/svg+xml" width="100%"/></div>
-    <script type="text/javascript">
-        var clipPath = jQuery('#top-right-clipPath');
-        animator = function (){
-            
-        }
-    </script>
+   <embed src="svg/book.svg" type="image/svg+xml"/>
 </body>
 </html>
