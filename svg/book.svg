@@ -9,29 +9,28 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:xlink="http://www.w3.org/1999/xlink"
    version="1.1"
-   width="560"
-   height="345"
-   id="svg3133"
+   width="1000"
+   height="600"
+   id="Book.js"
    onload="init()"
    onmouseup="mouseUp(evt)"
    onmousemove="mouseMove(evt)">
-   <style type="text/css">
-   <![CDATA[
-      @font-face {
-         font-family: 'NoticiaTextRegular';
-         src: url('noticia_text-webfont.svg#WebfontRegular') format('svg');
-         font-weight: normal;
-         font-style: normal;
-
+  <style type="text/css">
+  <![CDATA[
+     @font-face {
+        font-family: 'NoticiaTextRegular';
+        src: url('noticia_text-webfont.svg#WebfontRegular') format('svg');
+        font-weight: normal;
+        font-style: normal;
       }
-      * ::selection {
-         background: rgba(255,255,255, 0);
-      }
-   ]]>
-   </style>
-   <script type="text/ecmascript" xlink:href="book.js" />
+     * ::selection {
+        background: rgba(255,255,255, 0);
+     }
+  ]]>
+  </style>
+  <script type="text/ecmascript" xlink:href="book.js" />
   <defs
-     id="defs3135">
+     id="defs4">
     <filter
        color-interpolation-filters="sRGB"
        id="filter4943">
@@ -40,48 +39,24 @@
          stdDeviation="1.1107143" />
     </filter>
     <linearGradient
-       id="rightPagesGrad"
-       x1="0%"
-       y1="0%"
-       x2="100%"
-       y2="0%"
-       gradientUnits="objectBoundingBox">
-       <stop
-        offset="0"
-        style="stop-color:#EAEAEA;stop-opacity:1;" />
-       <stop
-        offset="25%"
-        style="stop-color:#FFFFFF;stop-opacity:0;" />
-       <stop
-        offset="100%"
-        style="stop-color:#FFFFFF;stop-opacity:0;" />
-    </linearGradient>
-    <linearGradient
-       id="leftPagesGrad"
-       x1="0%"
-       y1="0%"
-       x2="100%"
-       y2="0%"
-       gradientUnits="objectBoundingBox">
-       <stop
-        offset="0"
-        style="stop-color:#FFFFFF;stop-opacity:0;" />
-       <stop
-        offset="75%"
-        style="stop-color:#FFFFFF;stop-opacity:0;" />
-       <stop
-        offset="100%"
-        style="stop-color:#EAEAEA;stop-opacity:1;" />
-    </linearGradient>
-    <linearGradient
        x1="0%"
        y1="0%"
        x2="0%"
        y2="100%"
        id="hardCoverGrad"
-       gradientUnits="objectBoundingBox" >
-       <stop style="stop-color:#4A86C4;stop-opacity:1" offset="0" />
-       <stop style="stop-color:#5093D6;stop-opacity:1" offset="1" />
+       gradientUnits="objectBoundingBox">
+      <stop style="stop-color:#4a86c4;stop-opacity:1" offset="0" />
+      <stop style="stop-color:#5093d6;stop-opacity:1" offset="1" />
+    </linearGradient>
+    <linearGradient
+       x1="0"
+       y1="0"
+       x2="0"
+       y2="1"
+       id="goldGrad"
+       gradientUnits="objectBoundingBox">
+      <stop style="stop-color:#f2bf49;stop-opacity:1" offset="0" />
+      <stop style="stop-color:#f3cc76;stop-opacity:1" offset="1" />
     </linearGradient>
     <linearGradient
        x1="0%"
@@ -90,18 +65,30 @@
        y2="100%"
        id="spineGrad"
        gradientUnits="objectBoundingBox">
-       <stop style="stop-color:#2C5075;stop-opacity:1" offset="0" />
+      <stop style="stop-color:#2c5075;stop-opacity:1" offset="0" />
       <stop style="stop-color:#376593;stop-opacity:1" offset="1" />
     </linearGradient>
     <linearGradient
-       x1="0%"
-       y1="0%"
-       x2="0%"
-       y2="100%"
-       id="goldGrad"
+       x1="0"
+       y1="0"
+       x2="1"
+       y2="0"
+       id="rightPagesGrad"
        gradientUnits="objectBoundingBox">
-       <stop style="stop-color:#F2BF49;stop-opacity:1" offset="0" />
-      <stop style="stop-color:#F3CC76;stop-opacity:1" offset="1" />
+      <stop style="stop-color:#eaeaea;stop-opacity:1" offset="0" />
+      <stop style="stop-color:#ffffff;stop-opacity:0" offset="0.25" />
+      <stop style="stop-color:#ffffff;stop-opacity:0" offset="1" />
+    </linearGradient>
+    <linearGradient
+       x1="0"
+       y1="0"
+       x2="1"
+       y2="0"
+       id="leftPagesGrad"
+       gradientUnits="objectBoundingBox">
+      <stop style="stop-color:#ffffff;stop-opacity:0" offset="0" />
+      <stop style="stop-color:#ffffff;stop-opacity:0" offset="0.75" />
+      <stop style="stop-color:#eaeaea;stop-opacity:1" offset="1" />
     </linearGradient>
     <filter
        color-interpolation-filters="sRGB"
@@ -120,33 +107,32 @@
     <mask
        id="hideCurrentRightPage">
       <rect
-         width="560"
-         height="345"
+         width="1000"
+         height="600"
          x="0"
          y="0"
-         id="rect49"
          style="fill:#ffffff" />
       <g
-         transform="translate(280,330)">
+         transform="translate(500,575)">
         <rect
-           width="260"
-           height="345"
+           width="465"
+           height="550"
            x="0"
-           y="-345"
+           y="-550"
            id="hideCurrentRightPage-mask"
            style="fill:#000000" 
-           transform="translate(260,0) rotate(45)"/>
+           transform="translate(465,0) rotate(45)"/>
       </g>
     </mask>
     <mask
        id="revealNextLeftPage">
       <g
-         transform="translate(280,330)">
+         transform="translate(500,575)">
         <rect
-           width="260"
-           height="345"
-           x="-260"
-           y="-345"
+           width="465"
+           height="600"
+           x="-465"
+           y="-600"
            id="revealNextLeftPage-mask"
            style="fill:#ffffff" />
       </g>
@@ -154,12 +140,12 @@
     <mask
        id="revealLeftShade">
        <g
-         transform="translate(280,330)">
+         transform="translate(500,575)">
         <rect
-           width="260"
-           height="315"
-           x="-260"
-           y="-315"
+           width="465"
+           height="550"
+           x="-465"
+           y="-550"
            id="revealLeftShade-mask"
            style="fill:#ffffff" >           
         </rect>
@@ -168,37 +154,15 @@
     <mask
        id="symmetry-line-mask">
        <rect
-          x="20"
-          y="15"
-          width="520"
-          height="315"
+          x="35"
+          y="25"
+          width="930"
+          height="550"
           fill="#ffffff" />
     </mask>
-    <animateTransform
-      attributeName="transform"
-      attributeType="XML"
-      id="animateFlipNext-translate"
-      type="translate"
-      begin="indefinite"
-      from="260,0"
-      to="0,0"
-      additive="replace"
-      dur="1s" 
-      fill="freeze" />
-    <animateTransform
-      attributeName="transform"
-      attributeType="XML"
-      id="animateFlipNext-rotate"
-      type="rotate"
-      begin="indefinite"
-      from="45"
-      to="0"
-      additive="sum"
-      dur="1s" 
-      fill="freeze" />
   </defs>
   <metadata
-     id="metadata3138">
+     id="metadata7">
     <rdf:RDF>
       <cc:Work
          rdf:about="">
@@ -212,442 +176,423 @@
   <g
      id="book">
     <g
-       transform="translate(-95,-232.36218)"
        id="hardCover">
       <rect
          width="553.57147"
          height="335"
          x="103.21426"
          y="249.1479"
-         transform="matrix(1.001963,0,0,1.0137177,-5.7459187,-17.501168)"
+         transform="matrix(1.7892196,0,0,1.7629874,-179.90342,-434.54498)"
          id="hardCover-shadow"
          style="fill:#2c2c2c;fill-opacity:1;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none;filter:url(#filter4943)" />
       <path
-         d="m 101.75,237.625 0,1.3125 -1.5,0 0,331.8125 1.28125,0 0,1.375 546.5,0 0,-1.625 1.71875,0 0,-331.40625 -1.4375,0 0,-1.46875 -546.5625,0 z"
+         d="m 12.05357,9.1527251 0,2.2826089 -2.6785715,0 0,577.065236 2.2879465,0 0,2.39131 975.892815,0 0,-2.82609 3.06919,0 0,-576.358717 -2.56696,0 0,-2.5543479 -976.00442,0 z"
          id="hardCoverBG"
-         style="fill:url(#hardCoverGrad);fill-opacity:1;stroke:#1a120d;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
-      <g id="hardCoverBGLight-group">
-         <path
-            d="m 648.98047,239.31817 0.0386,330.93886"
-            id="hardCoverBGLight-right"
-            style="stroke:#5BA7F3;stroke-width:1px;stroke-opacity:0.7" />
-         <path
-            d="m 102.02696,238.36201 545.99992,0"
-            id="hardCoverBGLight-top"
-            style="stroke:#549AE1;stroke-width:1px;" />
-         <path
-            d="m 100.98051,239.21741 0.0386,331.33882"
-            id="hardCoverBGLight-left"
-            style="stroke:#5BA7F3;stroke-width:1px;stroke-opacity:0.7" />
-         <path
-            d="m 647.8376,571.35008 -546.02426,0.0242"
-            id="hardCoverBGLight-bottom"
-            style="stroke:#5BA7F3;stroke-width:1px;stroke-opacity:1" />            
+         style="fill:url(#hardCoverGrad);fill-opacity:1;stroke:#1a120d;stroke-width:0.88113421;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+      <g
+         id="hardCoverBGLight-group">
+        <path
+           d="m 989.25079,12.097369 0.0689,575.545861"
+           id="hardCoverBGLight-right"
+           style="stroke:#5ba7f3;stroke-width:1.76226842px;stroke-opacity:0.7" />
+        <path
+           d="m 12.548141,10.434482 974.999809,0"
+           id="hardCoverBGLight-top"
+           style="stroke:#549ae1;stroke-width:1.76226842px" />
+        <path
+           d="m 10.679481,11.922134 0.06893,576.241446"
+           id="hardCoverBGLight-left"
+           style="stroke:#5ba7f3;stroke-width:1.76226842px;stroke-opacity:0.7" />
+        <path
+           d="m 987.20995,589.54419 -975.043273,0.0421"
+           id="hardCoverBGLight-bottom"
+           style="stroke:#5ba7f3;stroke-width:1.76226842px;stroke-opacity:1" />
       </g>
-      <g id="gold-group">
-         <rect
-            width="49.004982"
-            height="99.004982"
-            x="600.4975"
-            y="396.85968"
-            id="rightGold"
-            style="fill:url(#goldGrad);fill-opacity:1;stroke:#1a120d;stroke-width:0.99501735;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
-         <path
-            d="m 601.02639,397.70078 48.58966,0"
-            id="rightGoldLight-top"
-            style="fill:#ffb380;fill-opacity:1;stroke:#ffdec7;stroke-width:1.01232052px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
-         <path
-            d="m 600.96271,494.76684 48.58966,0"
-            id="rightGoldLight-bottom"
-            style="fill:#ffb380;fill-opacity:1;stroke:#ffdec7;stroke-width:1.01232052px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0.59562845" />
-         <rect
-            width="49.004982"
-            height="99.004982"
-            x="100.49751"
-            y="396.85971"
-            id="leftGold"
-            style="fill:url(#goldGrad);fill-opacity:1;stroke:#1a120d;stroke-width:0.99501735;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
-         <path
-            d="m 100.43505,397.80093 48.58966,0"
-            id="leftGoldLight-top"
-            style="fill:#ffb380;fill-opacity:1;stroke:#ffdec7;stroke-width:1.01232052px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
-         <path
-            d="m 100.45444,494.78021 48.58966,0"
-            id="leftGoldLight-bottom"
-            style="fill:#ffb380;fill-opacity:1;stroke:#ffdec7;stroke-width:1.01232052px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0.49180328" />            
+      <g
+         id="gold-group">
+        <rect
+           width="87.508896"
+           height="172.18259"
+           x="902.67407"
+           y="286.08261"
+           id="rightGold"
+           style="fill:url(#goldGrad);fill-opacity:1;stroke:#1a120d;stroke-width:1.75348771;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+        <path
+           d="m 903.61851,287.5454 86.76725,0"
+           id="rightGoldLight-top"
+           style="fill:#ffb380;fill-opacity:1;stroke:#ffdec7;stroke-width:1.78398049px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+        <path
+           d="m 903.50479,456.35594 86.76725,0"
+           id="rightGoldLight-bottom"
+           style="fill:#ffb380;fill-opacity:1;stroke:#ffdec7;stroke-width:1.78398049px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0.59562845" />
+        <rect
+           width="87.508896"
+           height="172.18259"
+           x="9.8169861"
+           y="286.08267"
+           id="leftGold"
+           style="fill:url(#goldGrad);fill-opacity:1;stroke:#1a120d;stroke-width:1.75348771;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+        <path
+           d="m 9.705445,287.71957 86.767246,0"
+           id="leftGoldLight-top"
+           style="fill:#ffb380;fill-opacity:1;stroke:#ffdec7;stroke-width:1.78398049px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+        <path
+           d="m 9.74007,456.37919 86.767246,0"
+           id="leftGoldLight-bottom"
+           style="fill:#ffb380;fill-opacity:1;stroke:#ffdec7;stroke-width:1.78398049px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0.49180328" />
       </g>
-      <g id="cornerLine-group">
-         <path
-            d="m 101.52163,570.94773 20.06416,-20.15254"
-            id="cornerLine-bottom-left"
-            style="fill:none;stroke:#1a120d;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
-         <path
-            d="M 648.21681,570.57633 628.15265,550.42379"
-            id="cornerLine-bottom-right"
-            style="fill:none;stroke:#1a120d;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />         
-         <path
-            d="m 648.52953,238.82743 -20.06416,20.15254"
-            id="cornerLine-top-left"
-            style="fill:none;stroke:#1a120d;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
-         <path
-            d="m 101.55671,238.69924 20.06416,20.15254"
-            id="cornerLine-top-right"
-            style="fill:none;stroke:#1a120d;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+      <g
+         id="cornerLine-group">
+        <path
+           d="m 11.645766,588.84445 35.828856,-35.0479"
+           id="cornerLine-bottom-left"
+           style="fill:none;stroke:#1a120d;stroke-width:1.76226842px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+        <path
+           d="m 987.88711,588.19854 -35.82885,-35.0479"
+           id="cornerLine-bottom-right"
+           style="fill:none;stroke:#1a120d;stroke-width:1.76226842px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+        <path
+           d="M 988.44554,11.243908 952.61669,46.291805"
+           id="cornerLine-top-left"
+           style="fill:none;stroke:#1a120d;stroke-width:1.76226842px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+        <path
+           d="M 11.708409,11.020969 47.537265,46.068866"
+           id="cornerLine-top-right"
+           style="fill:none;stroke:#1a120d;stroke-width:1.76226842px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
       </g>
-      <g id="spine-group">
-         <rect
-            width="49.315208"
-            height="336.31522"
-            x="350.34238"
-            y="236.70457"
-            id="spine"
-            style="fill:url(#spineGrad);fill-opacity:1;stroke:#142537;stroke-width:1;stroke-opacity:1" />
-         <path
-            d="m 350.34456,237.2284 49.22389,0"
-            id="spineLight"
-            style="fill:none;stroke:#4D8DCE;stroke-width:1px;stroke-opacity:0.6" />
+      <g
+         id="spine-group">
+        <rect
+           width="88.062866"
+           height="584.89606"
+           x="455.96851"
+           y="7.5519853"
+           id="spine"
+           style="fill:url(#spineGrad);fill-opacity:1;stroke:#142537;stroke-width:1.76226842;stroke-opacity:1" />
+        <path
+           d="m 455.97241,8.4629859 87.8998,0"
+           id="spineLight"
+           style="fill:none;stroke:#4d8dce;stroke-width:1.76226842px;stroke-opacity:0.6" />
       </g>
+      <rect
+         width="534.67596"
+         height="304.00064"
+         x="12.88011"
+         y="20.612352"
+         transform="matrix(1.7957751,0,0,1.7455975,-3.2086599,-1.312248)"
+         id="pages-edge-shadow"
+         style="fill:#070707;fill-opacity:1;stroke:#ffffff;stroke-width:0.9993428;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;filter:url(#filter4563)" />
+      <rect
+         width="518.99915"
+         height="313.99911"
+         x="20.762129"
+         y="18.038851"
+         transform="matrix(1.7732227,0,0,1.7013497,4.3401691,14.157377)"
+         id="pages-bottom-shadow"
+         style="fill:#000000;fill-opacity:1;stroke:#ffffff;stroke-width:1.00087583;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;filter:url(#filter4541)" />
     </g>
-    <rect
-       width="534.67596"
-       height="304.00064"
-       x="12.88011"
-       y="20.612352"
-       id="pages-edge-shadow"
-       style="fill:#070707;fill-opacity:1;stroke:#ffffff;stroke-width:0.9993428;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;filter:url(#filter4563)" />
-    <rect
-       width="518.99915"
-       height="313.99911"
-       x="20.762129"
-       y="18.038851"
-       id="pages-bottom-shadow"
-       style="fill:#000000;fill-opacity:1;stroke:#ffffff;stroke-width:1.00087583;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;filter:url(#filter4541)" />
     <g
-       transform="translate(-95,-232.36218)"
        id="right-edge">
       <path
-         d="m 639.33964,252.04691 0,305.68356"
+         d="m 975.91615,31.788863 0,535.838677"
          id="path4191-3-8-4-7-1-5"
-         style="fill:#b6b6b6;fill-opacity:1;stroke:#ffffff;stroke-width:0.69883311px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+         style="fill:#b6b6b6;fill-opacity:1;stroke:#ffffff;stroke-width:1.48769224px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
       <path
-         d="m 639.09657,251.74759 0,306.28219"
+         d="m 975.28773,31.26418 0,536.88802"
          id="path4191-2-9-0-6-1"
-         style="fill:#b6b6b6;fill-opacity:1;stroke:#9b916e;stroke-width:0.53973889px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+         style="fill:#b6b6b6;fill-opacity:1;stroke:#9b916e;stroke-width:1.14900875px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
       <path
-         d="m 638.65462,251.45101 0,306.85204"
+         d="m 974.14514,30.744299 0,537.886921"
          id="path4191-3-8-4-7-1"
-         style="fill:#b6b6b6;fill-opacity:1;stroke:#ffffff;stroke-width:0.70016748px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+         style="fill:#b6b6b6;fill-opacity:1;stroke:#ffffff;stroke-width:1.49053288px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
       <path
-         d="m 638.27897,250.99717 0,307.76009"
+         d="m 973.17396,29.948754 0,539.478666"
          id="path4191-2-9-0-6"
-         style="fill:#b6b6b6;fill-opacity:1;stroke:#9b916e;stroke-width:0.54103953px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+         style="fill:#b6b6b6;fill-opacity:1;stroke:#9b916e;stroke-width:1.15177763px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
       <path
-         d="m 637.81494,250.56684 0,308.6158"
+         d="m 971.97428,29.19442 0,540.97865"
          id="path4191-3-8-4-7"
-         style="fill:#b6b6b6;fill-opacity:1;stroke:#ffffff;stroke-width:0.70217687px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+         style="fill:#b6b6b6;fill-opacity:1;stroke:#ffffff;stroke-width:1.49481058px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
       <path
-         d="m 637.50093,250.18502 0,309.39241"
+         d="m 971.16246,28.52512 0,542.33999"
          id="path4191-2-9-0"
-         style="fill:#b6b6b6;fill-opacity:1;stroke:#9b916e;stroke-width:0.54247242px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+         style="fill:#b6b6b6;fill-opacity:1;stroke:#9b916e;stroke-width:1.15482795px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
       <path
-         d="m 637.04688,249.79826 0,310.15908"
+         d="m 969.98859,27.847161 0,543.683899"
          id="path4191-3-8-4"
-         style="fill:#b6b6b6;fill-opacity:1;stroke:#ffffff;stroke-width:0.70393038px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+         style="fill:#b6b6b6;fill-opacity:1;stroke:#ffffff;stroke-width:1.4985435px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
       <path
-         d="m 636.70321,249.34329 0,311.06885"
+         d="m 969.10009,27.049635 0,545.278655"
          id="path4191-2-9"
-         style="fill:#b6b6b6;fill-opacity:1;stroke:#9b916e;stroke-width:0.54394013px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+         style="fill:#b6b6b6;fill-opacity:1;stroke:#9b916e;stroke-width:1.15795243px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
       <path
-         d="m 636.26553,249.00218 0,311.71806"
+         d="m 967.96854,26.451697 0,546.416663"
          id="path4191-3-8"
-         style="fill:#b6b6b6;fill-opacity:1;stroke:#ffffff;stroke-width:0.70569724px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+         style="fill:#b6b6b6;fill-opacity:1;stroke:#ffffff;stroke-width:1.50230479px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
       <path
-         d="m 635.93594,248.59478 0,312.56625"
+         d="m 967.11643,25.737557 0,547.903473"
          id="path4191-2"
-         style="fill:#b6b6b6;fill-opacity:1;stroke:#9b916e;stroke-width:0.54524773px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+         style="fill:#b6b6b6;fill-opacity:1;stroke:#9b916e;stroke-width:1.16073608px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
       <path
-         d="m 635.46104,248.18723 0,313.30906"
+         d="m 965.88866,25.023155 0,549.205565"
          id="path4191-3"
-         style="fill:#b6b6b6;fill-opacity:1;stroke:#ffffff;stroke-width:0.70749491px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+         style="fill:#b6b6b6;fill-opacity:1;stroke:#ffffff;stroke-width:1.50613177px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
       <path
-         d="m 635.15075,247.78183 0,314.19754"
+         d="m 965.08645,24.312522 0,550.762998"
          id="path4191"
-         style="fill:#b6b6b6;fill-opacity:1;stroke:#9b916e;stroke-width:0.52221894px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+         style="fill:#b6b6b6;fill-opacity:1;stroke:#9b916e;stroke-width:1.11171186px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
     </g>
     <g
-       transform="matrix(-1,0,0,1,654.95506,-232.46838)"
        id="left-edge">
       <path
-         d="m 639.33964,252.04691 0,305.68356"
+         d="m 23.348157,32.976322 0,535.310548"
          id="path4191-3-8-4-7-1-5-4"
-         style="fill:#b6b6b6;fill-opacity:1;stroke:#ffffff;stroke-width:0.69883311px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+         style="fill:#b6b6b6;fill-opacity:1;stroke:#ffffff;stroke-width:1.48351097px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
       <path
-         d="m 639.09657,251.74759 0,306.28219"
+         d="m 23.973664,32.452155 0,536.358855"
          id="path4191-2-9-0-6-1-3"
-         style="fill:#b6b6b6;fill-opacity:1;stroke:#9b916e;stroke-width:0.53973889px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+         style="fill:#b6b6b6;fill-opacity:1;stroke:#9b916e;stroke-width:1.14577937px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
       <path
-         d="m 638.65462,251.45101 0,306.85204"
+         d="m 25.110961,31.932787 0,537.356773"
          id="path4191-3-8-4-7-1-7"
-         style="fill:#b6b6b6;fill-opacity:1;stroke:#ffffff;stroke-width:0.70016748px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+         style="fill:#b6b6b6;fill-opacity:1;stroke:#ffffff;stroke-width:1.48634362px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
       <path
-         d="m 638.27897,250.99717 0,307.76009"
+         d="m 26.077645,31.138026 0,538.946944"
          id="path4191-2-9-0-6-8"
-         style="fill:#b6b6b6;fill-opacity:1;stroke:#9b916e;stroke-width:0.54103953px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+         style="fill:#b6b6b6;fill-opacity:1;stroke:#9b916e;stroke-width:1.14854038px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
       <path
-         d="m 637.81494,250.56684 0,308.6158"
+         d="m 27.271762,30.384436 0,540.445454"
          id="path4191-3-8-4-7-7"
-         style="fill:#b6b6b6;fill-opacity:1;stroke:#ffffff;stroke-width:0.70217687px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+         style="fill:#b6b6b6;fill-opacity:1;stroke:#ffffff;stroke-width:1.49060917px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
       <path
-         d="m 637.50093,250.18502 0,309.39241"
+         d="m 28.079823,29.715796 0,541.805454"
          id="path4191-2-9-0-0"
-         style="fill:#b6b6b6;fill-opacity:1;stroke:#9b916e;stroke-width:0.54247242px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+         style="fill:#b6b6b6;fill-opacity:1;stroke:#9b916e;stroke-width:1.15158224px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
       <path
-         d="m 637.04688,249.79826 0,310.15908"
+         d="m 29.248258,29.038505 0,543.148035"
          id="path4191-3-8-4-3"
-         style="fill:#b6b6b6;fill-opacity:1;stroke:#ffffff;stroke-width:0.70393038px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+         style="fill:#b6b6b6;fill-opacity:1;stroke:#ffffff;stroke-width:1.4943316px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
       <path
-         d="m 636.70321,249.34329 0,311.06885"
+         d="m 30.132645,28.241765 0,544.741215"
          id="path4191-2-9-3"
-         style="fill:#b6b6b6;fill-opacity:1;stroke:#9b916e;stroke-width:0.54394013px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+         style="fill:#b6b6b6;fill-opacity:1;stroke:#9b916e;stroke-width:1.1546979px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
       <path
-         d="m 636.26553,249.00218 0,311.71806"
+         d="m 31.258954,27.644416 0,545.878114"
          id="path4191-3-8-2"
-         style="fill:#b6b6b6;fill-opacity:1;stroke:#ffffff;stroke-width:0.70569724px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+         style="fill:#b6b6b6;fill-opacity:1;stroke:#ffffff;stroke-width:1.4980824px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
       <path
-         d="m 635.93594,248.59478 0,312.56625"
+         d="m 32.107108,26.93098 0,547.36345"
          id="path4191-2-6"
-         style="fill:#b6b6b6;fill-opacity:1;stroke:#9b916e;stroke-width:0.54524773px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+         style="fill:#b6b6b6;fill-opacity:1;stroke:#9b916e;stroke-width:1.15747368px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
       <path
-         d="m 635.46104,248.18723 0,313.30906"
+         d="m 33.329198,26.217282 0,548.664258"
          id="path4191-3-9"
-         style="fill:#b6b6b6;fill-opacity:1;stroke:#ffffff;stroke-width:0.70749491px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+         style="fill:#b6b6b6;fill-opacity:1;stroke:#ffffff;stroke-width:1.50189853px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
       <path
-         d="m 635.15075,247.78183 0,314.19754"
+         d="m 34.127686,25.507349 0,550.220151"
          id="path4191-9"
-         style="fill:#b6b6b6;fill-opacity:1;stroke:#9b916e;stroke-width:0.52221894px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+         style="fill:#b6b6b6;fill-opacity:1;stroke:#9b916e;stroke-width:1.10858727px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
     </g>
     <g
        id="previous-left-container">
       <g
-         id="previous-left-content"
-         transform="translate(280,330)">
+         transform="translate(500,575)"
+         id="previous-left-content">
         <rect
-           width="260"
-           height="315"
-           x="-260"
-           y="-315"
+           width="465"
+           height="550"
+           x="-465"
+           y="-550"
            id="previous-left-page"
-           style="fill:#FFFFFF;fill-opacity:1;stroke:#DEDEDE;stroke-width:0.5;" />
+           style="fill:#ffffff;fill-opacity:1;stroke:#dedede;stroke-width:0.5" />
         <text
-           x="-40%"
-           y="-50%"
+           x="-400"
+           y="-300"
            id="previous-left-text"
-           style="font-size:20px;fill:#808080;font-family:NoticiaTextRegular">Previous left page</text>
+           style="font-size:40px;fill:#808080;font-family:NoticiaTextRegular">Previous left page</text>
       </g>
       <g pointer-events="none">
-         <rect
-            width="260"
-            height="315"
-            x="-260"
-            y="-315"
-            id="previous-left-shade"
-            style="fill:url(#leftPagesGrad);fill-opacity:0.5;"
-            transform="translate(280,330)"/>
+        <rect
+           width="465"
+           height="550"
+           x="-465"
+           y="-550"
+           transform="translate(500,575)"
+           id="previous-left-shade"
+           style="fill:url(#leftPagesGrad);" />
       </g>
     </g>
     <g
-       mask="url(#revealNextLeftPage)"
-       id="next-left-container">
+       id="next-left-container"
+       mask="url(#revealNextLeftPage)">
       <g
-         transform="translate(280,330)"
+         transform="translate(500,575)"
          id="next-left-content">
         <rect
-           width="260"
-           height="315"
-           x="-260"
-           y="-315"
+           width="465"
+           height="550"
+           x="-465"
+           y="-550"
            id="next-left-page"
-           style="fill:#FFFFFF;fill-opacity:1;stroke:#DEDEDE;stroke-width:0.5;" />
+           style="fill:#ffffff;fill-opacity:1;stroke:#dedede;stroke-width:0.5" />
         <text
-           x="-40%"
-           y="-50%"
+           x="-400"
+           y="-300"
            id="next-left-text"
-           style="font-size:20px;fill:#808080;font-family:NoticiaTextRegular">Next left page</text>           
+           style="font-size:40px;fill:#808080;font-family:NoticiaTextRegular">Next left page</text>
       </g>
-      <g mask="url(#revealLeftShade)" pointer-events="none">
-         <rect
-            width="260"
-            height="315"
-            x="-260"
-            y="-315"
-            id="next-left-shade"
-            style="fill:url(#leftPagesGrad);fill-opacity:0.5;" 
-            transform="translate(280,330)" />
+      <g pointer-events="none"
+         mask="url(#revealLeftShade)">
+        <rect
+           width="465"
+           height="550"
+           x="-465"
+           y="-550"
+           transform="translate(500,575)"
+           id="next-left-shade"
+           style="fill:url(#leftPagesGrad);" />
       </g>
     </g>
     <g
        id="current-left-container">
       <g
-         transform="translate(280,330)"
+         transform="translate(500,575)"
          id="current-left-content">
         <rect
-           width="260"
-           height="315"
-           x="-260"
-           y="-315"
+           width="465"
+           height="550"
+           x="-465"
+           y="-550"
            id="current-left-page"
-           style="fill:#FFFFFF;fill-opacity:1;stroke:#DEDEDE;stroke-width:0.5;" />
+           style="fill:#ffffff;fill-opacity:1;stroke:#dedede;stroke-width:0.5" />
         <text
-           x="-40%"
-           y="-50%"
+           x="-400"
+           y="-300"
            id="current-left-text"
-           style="font-size:20px;fill:#808080;font-family:NoticiaTextRegular">Current left page</text>
+           style="font-size:40px;fill:#808080;font-family:NoticiaTextRegular">Current left page</text>
       </g>
       <g pointer-events="none">
         <rect
-           width="260"
-           height="315"
-           x="-260"
-           y="-315"
+           width="465"
+           height="550"
+           x="-465"
+           y="-550"
+           transform="translate(500,575)"
            id="current-left-shade"
-           style="fill:url(#leftPagesGrad);fill-opacity:0.5;"
-           transform="translate(280,330)"/>
+           style="fill:url(#leftPagesGrad);" />
       </g>
     </g>
     <g
        id="previous-right-container">
       <g
-         id="previous-right-content"
-         transform="translate(280,330)">
+         transform="translate(500,575)"
+         id="previous-right-content">
         <rect
-           width="260"
-           height="315"
+           width="465"
+           height="550"
            x="0"
-           y="-315"
+           y="-550"
            id="previous-right-page"
-           style="fill:#FFFFFF;fill-opacity:1;stroke:#DEDEDE;stroke-width:0.5;" />
+           style="fill:#ffffff;fill-opacity:1;stroke:#dedede;stroke-width:0.5" />
         <text
-           x="5%"
-           y="-50%"
+           x="100"
+           y="-300"
            id="previous-right-text"
-           style="font-size:20px;fill:#808080;font-family:NoticiaTextRegular">Previous right page</text>
+           style="font-size:40px;fill:#808080;font-family:NoticiaTextRegular">Previous right page</text>
       </g>
       <g pointer-events="none">
         <rect
-           width="260"
-           height="315"
+           width="465"
+           height="550"
            x="0"
-           y="-315"
+           y="-550"
+           transform="translate(500,575)"
            id="previous-right-shade"
-           style="fill:url(#rightPagesGrad);fill-opacity:0.5;"
-           transform="translate(280,330)" />
+           style="fill:url(#rightPagesGrad);" />
       </g>
     </g>
     <g
        id="next-right-container">
       <g
-         transform="translate(280,330)"
+         transform="translate(500,575)"
          id="next-right-content">
         <rect
-           width="260"
-           height="315"
+           width="465"
+           height="550"
            x="0"
-           y="-315"
+           y="-550"
            id="next-right-page"
-           style="fill:#FFFFFF;fill-opacity:1;stroke:#DEDEDE;stroke-width:0.5;" />
+           style="fill:#ffffff;fill-opacity:1;stroke:#dedede;stroke-width:0.5" />
         <text
-           x="5%"
-           y="-50%"
+           x="100"
+           y="-300"
            id="next-right-text"
-           style="font-size:20px;fill:#808080;font-family:NoticiaTextRegular">Next right page</text>
+           style="font-size:40px;fill:#808080;font-family:NoticiaTextRegular">Next right page</text>
       </g>
       <g pointer-events="none">
         <rect
-           width="260"
-           height="315"
+           width="465"
+           height="550"
            x="0"
-           y="-315"
+           y="-550"
+           transform="translate(500,575)"
            id="next-right-shade"
-           style="fill:url(#rightPagesGrad);fill-opacity:0.5;"
-           transform="translate(280,330)" />
+           style="fill:url(#rightPagesGrad);" />
       </g>
     </g>
     <g
-       mask="url(#hideCurrentRightPage)"
-       id="current-right-container">
+       id="current-right-container"
+       mask="url(#hideCurrentRightPage)">
       <g
-         transform="translate(280,330)"
+         transform="translate(500,575)"
          id="current-right-content">
         <rect
-           width="260"
-           height="315"
+           width="465"
+           height="550"
            x="0"
-           y="-315"
+           y="-550"
            id="current-right-page"
-           style="fill:#FFFFFF;fill-opacity:1;stroke:#DEDEDE;stroke-width:0.5;" />
+           style="fill:#ffffff;fill-opacity:1;stroke:#dedede;stroke-width:0.5" />
         <text
-           x="5%"
-           y="-50%"
+           x="100"
+           y="-300"
            id="current-right-text"
-           style="font-size:20px;fill:#808080;font-family:NoticiaTextRegular">Current right page</text>
+           style="font-size:40px;fill:#808080;font-family:NoticiaTextRegular">Current right page</text>
       </g>
       <g pointer-events="none">
         <rect
-           width="260"
-           height="315"
+           width="465"
+           height="550"
            x="0"
-           y="-315"
+           y="-550"
+           transform="translate(500,575)"
            id="current-right-shade"
-           style="fill:url(#rightPagesGrad);fill-opacity:0.5;"
-           transform="translate(280,330)" />
-      </g>
-    </g>
-    <g mask="url(#symmetry-line-mask)" id="symmetry-line-container">
-      <g
-         transform="translate(280,330)"
-         id="symmetry-group">
-         <path
-            d="M 0,0 0,-350"
-            transform="translate(260,0) rotate(45)"
-            id="symmetry-line"
-            style="stroke:#DEDEDE; stroke-Width: 1px;" />
+           style="fill:url(#rightPagesGrad);" />
       </g>
     </g>
     <g
-       transform="translate(-95,-232.36218)"
+       id="symmetry-line-container"
+       mask="url(#symmetry-line-mask)">
+      <g
+         transform="translate(500,575)"
+         id="symmetry-group">
+        <path
+           d="M 0,0 0,-600"
+           transform="matrix(0.70710678,0.70710678,-0.70710678,0.70710678,465,0)"
+           id="symmetry-line"
+           style="stroke:#dedede" />
+      </g>
+    </g>
+    <g
        id="center-line">
-      <path
-         d="m 375.88056,247.36197 0,314.99884"
-         id="path4477"
-         style="fill:none;stroke:#928e82;stroke-width:1.41503644px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
-      <path
-         d="m 374.42798,247.36886 0,314.99884"
-         id="path4477-8"
-         style="fill:none;stroke:#ffffff;stroke-width:1.45689905px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
-      <path
-         d="m 374.45445,327.29416 0,20.21826"
-         id="path4577"
-         style="fill:#fff1c2;fill-opacity:1;stroke:#a39e8e;stroke-width:1.41421354px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
-      <path
-         d="m 375.88321,327.29417 0,20.21826"
-         id="path4577-1"
-         style="fill:#a39e8e;fill-opacity:1;stroke:#ffffff;stroke-width:1.41421354px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
-      <path
-         d="m 377.32415,327.29416 0,20.21826"
-         id="path4577-8"
-         style="fill:#fff1c2;fill-opacity:1;stroke:#a39e8e;stroke-width:1.41421354px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
-      <path
-         d="m 374.45138,438.18092 0,20.21826"
-         id="path4577-6"
-         style="fill:#fff1c2;fill-opacity:1;stroke:#a39e8e;stroke-width:1.41421354px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
-      <path
-         d="m 375.88014,438.18093 0,20.21826"
-         id="path4577-1-3"
-         style="fill:#a39e8e;fill-opacity:1;stroke:#ffffff;stroke-width:1.41421354px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
-      <path
-         d="m 377.29891,438.18092 0,20.21826"
-         id="path4577-8-4"
-         style="fill:#fff1c2;fill-opacity:1;stroke:#a39e8e;stroke-width:1.41421354px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+      <path d="m 500,25 0,550" style="stroke:#928e82;stroke-width:2px;" />
+      <path d="m 498,25 0,550" style="stroke:#ffffff;stroke-width:2px;" />
+      <path d="m 498,165 0,35" style="stroke:#a39e8e;stroke-width:2px;" />
+      <path d="m 500,165 0,35" style="stroke:#ffffff;stroke-width:2px;" />
+      <path d="m 502,165 0,35" style="stroke:#a39e8e;stroke-width:2px;" />
+      <path d="m 498,355 0,35" style="stroke:#a39e8e;stroke-width:2px;" />
+      <path d="m 500,355 0,35" style="stroke:#ffffff;stroke-width:2px;" />
+      <path d="m 502,355 0,35" style="stroke:#a39e8e;stroke-width:2px;" />
     </g>
   </g>
 </svg>
