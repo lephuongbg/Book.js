@@ -13,8 +13,8 @@
    height="345"
    id="svg3133"
    onload="init()"
-   onmousemove="mouseMove(evt)"
-   onmouseup="mouseUp(evt)">
+   onmouseup="mouseUp(evt)"
+   onmousemove="mouseMove(evt)">
    <style type="text/css">
    <![CDATA[
       @font-face {
@@ -45,14 +45,16 @@
        y1="0%"
        x2="100%"
        y2="0%"
-       gradientUnits="objectBoundingBox"
-       spreadMethod="pad">
+       gradientUnits="objectBoundingBox">
        <stop
         offset="0"
         style="stop-color:#EAEAEA;stop-opacity:1;" />
        <stop
         offset="25%"
-        style="stop-color:#FAFAFA;stop-opacity:1;" />
+        style="stop-color:#FFFFFF;stop-opacity:0;" />
+       <stop
+        offset="100%"
+        style="stop-color:#FFFFFF;stop-opacity:0;" />
     </linearGradient>
     <linearGradient
        id="leftPagesGrad"
@@ -60,11 +62,13 @@
        y1="0%"
        x2="100%"
        y2="0%"
-       gradientUnits="objectBoundingBox"
-       spreadMethod="pad">
+       gradientUnits="objectBoundingBox">
+       <stop
+        offset="0"
+        style="stop-color:#FFFFFF;stop-opacity:0;" />
        <stop
         offset="75%"
-        style="stop-color:#FAFAFA;stop-opacity:1;" />
+        style="stop-color:#FFFFFF;stop-opacity:0;" />
        <stop
         offset="100%"
         style="stop-color:#EAEAEA;stop-opacity:1;" />
@@ -123,8 +127,7 @@
          id="rect49"
          style="fill:#ffffff" />
       <g
-         transform="translate(280,330)"
-         id="g51">
+         transform="translate(280,330)">
         <rect
            width="260"
            height="345"
@@ -138,8 +141,7 @@
     <mask
        id="revealNextLeftPage">
       <g
-         transform="translate(280,330)"
-         id="g55">
+         transform="translate(280,330)">
         <rect
            width="260"
            height="345"
@@ -147,6 +149,20 @@
            y="-345"
            id="revealNextLeftPage-mask"
            style="fill:#ffffff" />
+      </g>
+    </mask>
+    <mask
+       id="revealLeftShade">
+       <g
+         transform="translate(280,330)">
+        <rect
+           width="260"
+           height="315"
+           x="-260"
+           y="-315"
+           id="revealLeftShade-mask"
+           style="fill:#ffffff" >           
+        </rect>
       </g>
     </mask>
     <mask
@@ -158,6 +174,28 @@
           height="315"
           fill="#ffffff" />
     </mask>
+    <animateTransform
+      attributeName="transform"
+      attributeType="XML"
+      id="animateFlipNext-translate"
+      type="translate"
+      begin="indefinite"
+      from="260,0"
+      to="0,0"
+      additive="replace"
+      dur="1s" 
+      fill="freeze" />
+    <animateTransform
+      attributeName="transform"
+      attributeType="XML"
+      id="animateFlipNext-rotate"
+      type="rotate"
+      begin="indefinite"
+      from="45"
+      to="0"
+      additive="sum"
+      dur="1s" 
+      fill="freeze" />
   </defs>
   <metadata
      id="metadata3138">
@@ -399,12 +437,22 @@
            x="-260"
            y="-315"
            id="previous-left-page"
-           style="fill:url(#leftPagesGrad);fill-opacity:1;stroke:#DEDEDE;stroke-width:0.5;" />
+           style="fill:#FFFFFF;fill-opacity:1;stroke:#DEDEDE;stroke-width:0.5;" />
         <text
            x="-40%"
            y="-50%"
            id="previous-left-text"
            style="font-size:20px;fill:#808080;font-family:NoticiaTextRegular">Previous left page</text>
+      </g>
+      <g pointer-events="none">
+         <rect
+            width="260"
+            height="315"
+            x="-260"
+            y="-315"
+            id="previous-left-shade"
+            style="fill:url(#leftPagesGrad);fill-opacity:0.5;"
+            transform="translate(280,330)"/>
       </g>
     </g>
     <g
@@ -419,12 +467,22 @@
            x="-260"
            y="-315"
            id="next-left-page"
-           style="fill:url(#leftPagesGrad);fill-opacity:1;stroke:#DEDEDE;stroke-width:0.5;" />
+           style="fill:#FFFFFF;fill-opacity:1;stroke:#DEDEDE;stroke-width:0.5;" />
         <text
            x="-40%"
            y="-50%"
            id="next-left-text"
            style="font-size:20px;fill:#808080;font-family:NoticiaTextRegular">Next left page</text>           
+      </g>
+      <g mask="url(#revealLeftShade)" pointer-events="none">
+         <rect
+            width="260"
+            height="315"
+            x="-260"
+            y="-315"
+            id="next-left-shade"
+            style="fill:url(#leftPagesGrad);fill-opacity:0.5;" 
+            transform="translate(280,330)" />
       </g>
     </g>
     <g
@@ -438,12 +496,22 @@
            x="-260"
            y="-315"
            id="current-left-page"
-           style="fill:url(#leftPagesGrad);fill-opacity:1;stroke:#DEDEDE;stroke-width:0.5;" />
+           style="fill:#FFFFFF;fill-opacity:1;stroke:#DEDEDE;stroke-width:0.5;" />
         <text
            x="-40%"
            y="-50%"
            id="current-left-text"
            style="font-size:20px;fill:#808080;font-family:NoticiaTextRegular">Current left page</text>
+      </g>
+      <g pointer-events="none">
+        <rect
+           width="260"
+           height="315"
+           x="-260"
+           y="-315"
+           id="current-left-shade"
+           style="fill:url(#leftPagesGrad);fill-opacity:0.5;"
+           transform="translate(280,330)"/>
       </g>
     </g>
     <g
@@ -457,12 +525,22 @@
            x="0"
            y="-315"
            id="previous-right-page"
-           style="fill:url(#rightPagesGrad);fill-opacity:1;stroke:#DEDEDE;stroke-width:0.5;" />
+           style="fill:#FFFFFF;fill-opacity:1;stroke:#DEDEDE;stroke-width:0.5;" />
         <text
            x="5%"
            y="-50%"
            id="previous-right-text"
            style="font-size:20px;fill:#808080;font-family:NoticiaTextRegular">Previous right page</text>
+      </g>
+      <g pointer-events="none">
+        <rect
+           width="260"
+           height="315"
+           x="0"
+           y="-315"
+           id="previous-right-shade"
+           style="fill:url(#rightPagesGrad);fill-opacity:0.5;"
+           transform="translate(280,330)" />
       </g>
     </g>
     <g
@@ -476,12 +554,22 @@
            x="0"
            y="-315"
            id="next-right-page"
-           style="fill:url(#rightPagesGrad);fill-opacity:1;stroke:#DEDEDE;stroke-width:0.5;" />
+           style="fill:#FFFFFF;fill-opacity:1;stroke:#DEDEDE;stroke-width:0.5;" />
         <text
            x="5%"
            y="-50%"
            id="next-right-text"
            style="font-size:20px;fill:#808080;font-family:NoticiaTextRegular">Next right page</text>
+      </g>
+      <g pointer-events="none">
+        <rect
+           width="260"
+           height="315"
+           x="0"
+           y="-315"
+           id="next-right-shade"
+           style="fill:url(#rightPagesGrad);fill-opacity:0.5;"
+           transform="translate(280,330)" />
       </g>
     </g>
     <g
@@ -496,12 +584,22 @@
            x="0"
            y="-315"
            id="current-right-page"
-           style="fill:url(#rightPagesGrad);fill-opacity:1;stroke:#DEDEDE;stroke-width:0.5;" />
+           style="fill:#FFFFFF;fill-opacity:1;stroke:#DEDEDE;stroke-width:0.5;" />
         <text
            x="5%"
            y="-50%"
            id="current-right-text"
            style="font-size:20px;fill:#808080;font-family:NoticiaTextRegular">Current right page</text>
+      </g>
+      <g pointer-events="none">
+        <rect
+           width="260"
+           height="315"
+           x="0"
+           y="-315"
+           id="current-right-shade"
+           style="fill:url(#rightPagesGrad);fill-opacity:0.5;"
+           transform="translate(280,330)" />
       </g>
     </g>
     <g mask="url(#symmetry-line-mask)" id="symmetry-line-container">
