@@ -219,90 +219,86 @@ function autoFlipNext() {
    leftShade.setAttribute("y", "-345");
    leftShade.setAttribute("height", "345");
    
-   var animTrans = document.getElementById("animateFlipNext-translate");
-   var animRot = document.getElementById("animateFlipNext-rotate");
-   animations = new Array();
-   animations.push(sLine.appendChild(animTrans.cloneNode(false)));
-   animations.push(sLine.appendChild(animRot.cloneNode(false)));
-   animations.push(hideRightMask.appendChild(animTrans.cloneNode(false)));
-   animations.push(hideRightMask.appendChild(animRot.cloneNode(false)));
-   animTrans.setAttribute("additive", "sum");
-   animations.push(revealLeftMask.appendChild(animTrans.cloneNode(false)));
-   animations.push(revealLeftMask.appendChild(animRot.cloneNode(false)));
-   animations.push(leftShade.appendChild(animTrans.cloneNode(false)));
-   animations.push(leftShade.appendChild(animRot.cloneNode(false)));
-   animRot.setAttribute("from", "90");
-   animations.push(nextLeftContent.appendChild(animTrans.cloneNode(false)));
-   animations.push(nextLeftContent.appendChild(animRot.cloneNode(false)));
-   animations.push(nextLeftContent.appendChild(animTrans.cloneNode(false)));
-   animations.push(leftShadeMask.appendChild(animTrans.cloneNode(false)));
-   animations.push(leftShadeMask.appendChild(animRot.cloneNode(false)));
-   animations.push(leftShadeMask.appendChild(animTrans.cloneNode(false)));
+//    var animTrans = document.getElementById("animateFlipNext-translate");
+//    var animRot = document.getElementById("animateFlipNext-rotate");
+//    animations = new Array();
+//    animations.push(sLine.appendChild(animTrans.cloneNode(false)));
+//    animations.push(sLine.appendChild(animRot.cloneNode(false)));
+//    animations.push(hideRightMask.appendChild(animTrans.cloneNode(false)));
+//    animations.push(hideRightMask.appendChild(animRot.cloneNode(false)));
+//    animTrans.setAttribute("additive", "sum");
+//    animations.push(revealLeftMask.appendChild(animTrans.cloneNode(false)));
+//    animations.push(revealLeftMask.appendChild(animRot.cloneNode(false)));
+//    animations.push(leftShade.appendChild(animTrans.cloneNode(false)));
+//    animations.push(leftShade.appendChild(animRot.cloneNode(false)));
+//    animRot.setAttribute("from", "90");
+//    animations.push(nextLeftContent.appendChild(animTrans.cloneNode(false)));
+//    animations.push(nextLeftContent.appendChild(animRot.cloneNode(false)));
+//    animations.push(nextLeftContent.appendChild(animTrans.cloneNode(false)));
+//    animations.push(leftShadeMask.appendChild(animTrans.cloneNode(false)));
+//    animations.push(leftShadeMask.appendChild(animRot.cloneNode(false)));
+//    animations.push(leftShadeMask.appendChild(animTrans.cloneNode(false)));
+//    
+//    for (var i = 0; i < animations.length; i++) {
+//       animations[i].beginElement();
+//    }
+//    setTimeout(function() {
+//       leftShade.setAttribute("y", "-315");
+//       leftShade.setAttribute("height", "315");
+//       actedFlipNext = false;
+//       doneFlippingNext();
+//       animating = false;
+//       for (var i = 0; i < animations.length; i++) {
+//          animations[i].parentNode.removeChild(animations[i]);
+//       }
+//       animTrans.setAttribute("additive", "replace");
+//       animRot.setAttribute("from", "45");
+//       nextStack = nextStack - 1;
+//       if (nextStack != 0)
+//          autoFlipNext();
+//    }, 1100);
    
-   for (var i = 0; i < animations.length; i++) {
-      animations[i].beginElement();
-   }
-   setTimeout(function() {
-      leftShade.setAttribute("y", "-315");
-      leftShade.setAttribute("height", "315");
-      actedFlipNext = false;
-      doneFlippingNext();
-      animating = false;
-      for (var i = 0; i < animations.length; i++) {
-         animations[i].parentNode.removeChild(animations[i]);
-      }
-      animTrans.setAttribute("additive", "replace");
-      animRot.setAttribute("from", "45");
-      nextStack = nextStack - 1;
-      if (nextStack != 0)
-         autoFlipNext();
-   }, 1100);
-   
-   
-      
-   
-   
-//    var time = 0;
-//    var increment = 50;
-//    var timer = setInterval(function() { time = time + increment}, increment);
-//    var start = time;
-//    var limit = dragX/260*1000;
-//    animating = true;
-//    var flipper = setInterval(function () {
-//          if (time - start >= limit) {
-//             clearInterval(timer);
-//             sLine.removeAttribute("transform");
-//             hideRightMask.removeAttribute("transform");
-//             revealLeftMask.removeAttribute("transform");
-//             leftShade.setAttribute("transform", "translate(280,330)");
-//             nextLeftContent.setAttribute("transform", "translate(280,330)");
-//             leftShadeMask.removeAttribute("transform");
-//             leftShade.setAttribute("y", "-315");
-//             leftShade.setAttribute("height", "315");
-//             actedFlipNext = false;
-//             doneFlippingNext();
-//             clearInterval(flipper);
-//             animating = false;
-//             nextStack = nextStack - 1;
-//             if (nextStack != 0)
-//                autoFlipNext();
-//             return;
-//          }
-//          // Speed control
-//          if (dragX <= 10)
-//             increment = 1;
-//          else if (dragX <= 50)
-//             increment = 10;
+   var time = 0;
+   var increment = 10;
+   var timer = setInterval(function() { time = time + increment}, increment);
+   var start = time;
+   var limit = dragX;
+   animating = true;
+   var flipper = setInterval(function () {
+         if (time - start >= limit) {
+            clearInterval(timer);
+            sLine.removeAttribute("transform");
+            hideRightMask.removeAttribute("transform");
+            revealLeftMask.removeAttribute("transform");
+            leftShade.setAttribute("transform", "translate(280,330)");
+            nextLeftContent.setAttribute("transform", "translate(280,330)");
+            leftShadeMask.removeAttribute("transform");
+            leftShade.setAttribute("y", "-315");
+            leftShade.setAttribute("height", "315");
+            actedFlipNext = false;
+            doneFlippingNext();
+            clearInterval(flipper);
+            animating = false;
+            nextStack = nextStack - 1;
+            if (nextStack != 0)
+               autoFlipNext();
+            return;
+         }
+         // Speed control
+         if (dragX <= 10)
+            increment = 1;
+         else if (dragX <= 20)
+            increment = 5;
 //          else if (dragX <= 100)
 //             increment = 20;
-//          dragX = (limit - (time - start))/1000*260;
-//          sLine.setAttribute("transform", "translate(" + dragX + ",0) rotate(" + 45*(dragX)/260 +")");
-//          hideRightMask.setAttribute("transform", "translate(" + dragX + ",0) rotate(" + 45*(dragX)/260 +")");
-//          nextLeftContent.setAttribute("transform", "translate(" + (dragX + 280) + ",330) rotate(" + 90*(dragX)/260 +") translate(" + dragX + ",0)");
-//          leftShadeMask.setAttribute("transform", "translate(" + dragX + ",0) rotate(" + 90*(dragX)/260 +") translate(" + dragX + ",0)");
-//          revealLeftMask.setAttribute("transform", "translate(" + dragX + ",0) rotate(" + 45*(dragX)/260 +")");
-//          leftShade.setAttribute("transform", "translate(280,330) translate(" + dragX + ",0) rotate(" + 45*(dragX)/260 +")");
-//       },1);
+         dragX = (limit - (time - start))/300*260;
+         sLine.setAttribute("transform", "translate(" + dragX + ",0) rotate(" + 45*(dragX)/260 +")");
+         hideRightMask.setAttribute("transform", "translate(" + dragX + ",0) rotate(" + 45*(dragX)/260 +")");
+         nextLeftContent.setAttribute("transform", "translate(" + (dragX + 280) + ",330) rotate(" + 90*(dragX)/260 +") translate(" + dragX + ",0)");
+         leftShadeMask.setAttribute("transform", "translate(" + dragX + ",0) rotate(" + 90*(dragX)/260 +") translate(" + dragX + ",0)");
+         revealLeftMask.setAttribute("transform", "translate(" + dragX + ",0) rotate(" + 45*(dragX)/260 +")");
+         leftShade.setAttribute("transform", "translate(280,330) translate(" + dragX + ",0) rotate(" + 45*(dragX)/260 +")");
+      },16);
 }
 function navigate(evt) {
    if (evt.keyCode == 39) {
