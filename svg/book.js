@@ -250,14 +250,18 @@ function autoFlipNext() {
          // Speed control
          if (dragX <= 30)
             increment = 1;
-         dragX = (limit - (time - start))/300*465;
+         else if (dragX <= 50)
+            increment = 5;
+         else if (dragX <= 360)
+            increment = 20;
+         dragX = (limit - (time - start));
          sLine.setAttribute("transform", "translate(" + dragX + ",0) rotate(" + 45*(dragX)/465 +")");
          hideRightMask.setAttribute("transform", "translate(" + dragX + ",0) rotate(" + 45*(dragX)/465 +")");
          nextLeftContent.setAttribute("transform", "translate(" + (dragX + 500) + ",575) rotate(" + 90*(dragX)/465 +") translate(" + dragX + ",0)");
          leftShadeMask.setAttribute("transform", "translate(" + dragX + ",0) rotate(" + 90*(dragX)/465 +") translate(" + dragX + ",0)");
          revealLeftMask.setAttribute("transform", "translate(" + dragX + ",0) rotate(" + 45*(dragX)/465 +")");
          leftShade.setAttribute("transform", "translate(500,575) translate(" + dragX + ",0) rotate(" + 45*(dragX)/465 +")");
-      },16);
+      },1);
 }
 function navigate(evt) {
    if (evt.keyCode == 39) {
